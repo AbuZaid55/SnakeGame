@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <div>
+        <div class="score">
+            <span id="HighScore">HighScore: 500</span>
+            <span id="Score">Score: 0</span>
+            <span id="SpeedMode">Speed Mode
+                <div class="d-none">
+                    <div>
+                        <label for="slow"><input type="radio" name="speedMode" id="slow" value="slow">Slow</label>
+                        <label for="normal"><input type="radio" name="speedMode" id="normal" value="normal" checked>Normal</label>
+                        <label for="fast"><input type="radio" name="speedMode" id="fast" value="fast">Fast</label>
+                        <label for="faster"><input type="radio" name="speedMode" id="faster" value="faster">Faster</label>
+                    </div>
+                </div>
+            </span>
+            <span id="music"><i class="fa-solid fa-volume-high"></i></span>
+        </div>
+        <div id="container"></div>
+        <div id="key">
+            <div><i class="fa-solid fa-arrow-up" id="ArUp"></i></div>
+            <div class="key1"><span><i class="fa-solid fa-arrow-left" id="ArLeft"></i></span><span><i class="fa-solid fa-arrow-right" id="ArRight"></i></span></div>
+            <div><i class="fa-solid fa-arrow-down" id="ArDown"></i></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

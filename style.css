@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before{
+    content: "";
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg , red ,blue) ;
+    z-index: -100;
+}
+#container{
+    width: 90vmin;
+    height: 90vmin;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr);
+    border: 2px solid white;
+    margin: auto;
+    background: linear-gradient(45deg,red,blue);
+}
+
+.snakehead{
+    background:linear-gradient(rgb(240,124,124),rgb(228,228,129));
+    border-radius: 10px;
+    transform: scale(1.15);
+    border: .25vmin solid rgb(34, 4, 34);
+}
+.snakebody{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+.snakefood{
+    background:linear-gradient(green, red) ;
+    border: .25vmin solid black;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    animation: flipker 0.2s infinite 
+}
+.score{
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@keyframes flipker{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.2);
+    }
+}
+#SpeedMode{
+    position: relative;
+    cursor: pointer;
+}
+#SpeedMode div div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.d-none{
+    display: none;
+}
+#music{
+    cursor: pointer;
+}
+#key{
+    color:white;
+    max-width: 400px;
+    font-size: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+}
+#key div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78%;
+    height: 55px;
+}
+#key div.key1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#key i{
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 50%;
+}
+@media (max-width:500px) {
+    #key{
+        display: flex;
+    }  
+}
+@media (min-width:321px) and (max-width:500px){
+    #container{
+        width: 300px;
+        height: 300px;
+    }
+    .score{
+        font-size: 14px;
+    }
+}
+@media (max-width:320px){
+    #container{
+        width: 200px;
+        height: 200px;
+    }
+    .score{
+        font-size: 14px;
+    }
+}
